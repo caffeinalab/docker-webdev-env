@@ -2,7 +2,7 @@ version: '3'
 
 services:
   
-  php:
+  php7:
     volumes:
       - ../data/www:/www
     env_file:
@@ -10,7 +10,7 @@ services:
     logging:
       driver: "json-file"
 
-  db:
+  mysql:
     ports:
       - "$DB_PORT:3306"
     env_file:
