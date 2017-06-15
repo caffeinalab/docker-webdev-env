@@ -141,6 +141,7 @@ services:
       - "traefik.backend=$PROJECT_NAME"
       - "traefik.frontend.rule=Host:$GIT_BRANCH.$PROJECT_NAME.localhost"
       # - "traefik.protocol=https"
+      - "traefik.weight=10"
       - "traefik.port=80"
       - "traefik.docker.network=loadbalancer0"
 
